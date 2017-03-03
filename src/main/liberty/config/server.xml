@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!-- Copyright (c) 2015 IBM Corp.
  
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,17 +14,37 @@
   limitations under the License.-->
 <server description="Sample Liberty server">
 
-    <featureManager>
-        <feature>servlet-3.1</feature>
-    </featureManager>
-
-
     <httpEndpoint httpPort="${default.http.port}" httpsPort="${default.https.port}"
         id="defaultHttpEndpoint">
     <tcpOptions soReuseAddr="true"/>
     
     </httpEndpoint>
-    
-    <application name="servlet" context-root="${appContext}" location="${appLocation}" type="war"></application>
-    
+    <application name="jpaApp" context-root="${appContext}" location="${appLocation}" type="war"></application>
+
+    <featureManager>
+    	<feature>servlet-3.1</feature>
+        <feature>jdbc-4.1</feature>
+        <feature>jpa-2.0</feature>
+    </featureManager>
+
+    <jdbcDriver id="DerbyEmbedded" libraryRef="DerbyLib" />
+    <library id="DerbyLib" filesetRef="DerbyFileset" />
+    <fileset id="DerbyFileset"
+             dir="${shared.resource.dir}"
+             includes="derby-10.13.1.1.jar" />
+
+    <dataSource id="jdbc/samplejpadatasource"
+                jndiName="jdbc/samplejpadatasource"
+                jdbcDriverRef="DerbyEmbedded">
+        <properties.derby.embedded databaseName="memory:jpasampledatabase"
+                    createDatabase="create" />
+    </dataSource>
+
+    <dataSource id="jdbc/samplejpadatasourcenonjta"
+                jndiName="jdbc/samplejpadatasourcenonjta"
+                jdbcDriverRef="DerbyEmbedded"
+                transactional="false">
+        <properties.derby.embedded databaseName="memory:jpasampledatabase"
+                    createDatabase="create" />
+    </dataSource>
 </server>
