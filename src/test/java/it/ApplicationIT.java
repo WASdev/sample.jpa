@@ -17,7 +17,7 @@ package it;
 
 import org.junit.Test;
 
-public class TestApplication extends EndpointTest {/*
+public class ApplicationIT extends EndpointHelper {/*
 
     @Test
     public void testDeployment() {

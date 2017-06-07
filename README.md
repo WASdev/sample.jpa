@@ -10,9 +10,8 @@ The JPA sample contains a server definition which includes the Servlet, JDBC and
 1. Clone this project and import into Eclipse as an 'Existing Maven Project'.
 2. Right-click the project and select **Run As > Maven Clean**.
 3. Right-click the project and select **Run As > Maven Install**.
-4. Navigate to `target/liberty/wlp/bin` and run `./installUtility install defaultServer` to install the features required by the server.
-5. Right-click the project and select **Run As > Maven Build...** then run the goal `liberty:run-server`.
-6. You should see the following in the console: `Application JPA Sample started in XX.XX seconds.`
+4. Right-click the project and select **Run As > Maven Build...** then run the goal `liberty:run-server`.
+5. You should see the following in the console: `Application JPA Sample started in XX.XX seconds.`
 
 ## Running with Maven
 
@@ -25,9 +24,7 @@ Use the following steps to run the application with Maven:
     $ mvn clean install
     ```
 
-2. Navigate to `target/liberty/wlp/bin` and run `./installUtility install defaultServer` to install the features required by the server.
-
-3. To run the server with the Servlet sample execute:
+2. To run the server with the Servlet sample execute:
     ```bash
     $ mvn liberty:run-server
     ```
