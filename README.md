@@ -1,4 +1,4 @@
-Java Persistence API (JPA) Sample
+Java Persistence API (JPA) Sample [![Build Status](https://travis-ci.org/WASdev/sample.jpa.svg?branch=master)](https://travis-ci.org/WASdev/sample.jpa)
 ==============
 
 
