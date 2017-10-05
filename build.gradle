@@ -85,15 +85,6 @@ task copyDerby {
     }
 }
 
-task copyPersistence{
-	doLast {
-		copy {
-				from "src/main/resources"
-				into "$buildDir/classes/java/main/"
-		}
-	}
-}
-
 test {
     println 'inside the test block'
     reports.html.destination = file("$buildDir/reports/unit")
