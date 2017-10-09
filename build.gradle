@@ -112,7 +112,7 @@ task printMessageAboutRunningServer {
 
 check.dependsOn 'integrationTest'
 copyDerby.dependsOn 'installApps'
-libertyStart.dependsOn 'installFeature', 'copyDerby', 'copyPersistence'
+libertyStart.dependsOn 'installFeature', 'copyDerby'
 integrationTest.dependsOn 'libertyStart', 'testClasses'
 integrationTest.finalizedBy 'libertyStop'
 libertyStart.finalizedBy 'printMessageAboutRunningServer'
