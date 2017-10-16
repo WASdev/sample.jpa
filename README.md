@@ -15,7 +15,7 @@ The JPA sample contains a server definition which includes the Servlet, JDBC and
 
 ## Running with Maven
 
-This project can be built with [Apache Maven](http://maven.apache.org/). The project uses [Liberty Maven Plug-in][] to automatically download and install Liberty profile runtime from the [Liberty repository](https://developer.ibm.com/wasdev/downloads/). Liberty Maven Plug-in is also used to create, configure, and run the application on the Liberty server.
+This project can be built with [Apache Maven](http://maven.apache.org/). The project uses [Liberty Maven Plug-in] to automatically download and install Liberty profile runtime from the [Liberty repository](https://developer.ibm.com/wasdev/downloads/). Liberty Maven Plug-in is also used to create, configure, and run the application on the Liberty server.
 
 Use the following steps to run the application with Maven:
 
@@ -60,7 +60,7 @@ Once the server has started, the application will be available under [http://loc
     $ gradle libertyStop
     ```  
 
-Please refer to the [ci.gradle][] repository for documentation about using the Liberty Gradle Plug-in.
+Please refer to the [ci.gradle] repository for documentation about using the Liberty Gradle Plug-in.
 
 # Notice
 
