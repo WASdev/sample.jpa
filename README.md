@@ -32,6 +32,14 @@ Use the following steps to run the application with Maven:
 In your browser, enter the URL for the application: [http://localhost:9080/jpaApp/](http://localhost:9080/jpaApp/) (where port 9080 assumes the httpEndpoint provided in the sample server.xml has not been modified).
 In your browser, you should see the message `Hello JPA World` followed by information about the entity being persisted to and retrieved from the database.
 
+## Running in Eclipse with Gradle
+
+1. Go to *Help > Eclipse Marketplace > Install Buildship Gradle Integration 2.0*
+2. Clone this project and import into Eclipse as an 'Existing Gradle Project'.
+3. Go to *Window > Show View > Other > Gradle Executions & Gradle Tasks*
+4. Go to Gradle Tasks view and run `clean` in build folder, then `build` in build folder, then `libertyStart` in liberty folder.
+5. You should see the following in the console: `Application JPA Sample started in XX.XX seconds.`
+
 ## Running with Gradle
 
 This project can also be built and run with [Gradle]. The provided `build.gradle` file applies the [Liberty Gradle Plug-in] and is configured to automatically download and install the Liberty Java EE7 Web Profile runtime from Maven Central. The Liberty Gradle Plug-in has built-in tasks that can be used to create, configure, and run the application on the Liberty server.
